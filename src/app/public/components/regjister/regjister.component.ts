@@ -12,4 +12,8 @@ export class RegjisterComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  regjisterUser(item:any){
+
+  }
+
 }

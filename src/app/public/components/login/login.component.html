@@ -1,0 +1,29 @@
+<section>
+  <div class="center">
+    <form #loginForm="ngForm" (ngSubmit)="loginUser(loginForm.value)">
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Shkruani Email Addressen"
+        ngModel
+        #name="ngModel"
+        required
+        pattern=" [^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+$"
+      />
+      <br />
+      <span class="email" *ngIf="name.invalid && name.touched">
+        Email Addressa nuk esht valide</span
+      >
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="Shenoni FjalKalimin"
+        ng
+        ngModel
+      />
+      <button [disabled]="loginForm.invalid">Dergo</button>
+    </form>
+  </div>
+</section>

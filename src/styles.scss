@@ -33,7 +33,7 @@ a {
   text-decoration: none !important;
 }
 
-a .regjistrohu {
+a .regjistrohu, .mobile-regjistrohu {
   border: 2px solid $secondary;
   background-color: $secondary;
   @extend %padding-border-r;

@@ -1,5 +1,71 @@
 <section>
-    <div class="center">
-        
-    </div>
+  <div class="center">
+    <form
+      #regjisterForm="ngForm"
+      (ngSubmit)="regjisterUser(regjisterForm.value)"
+    >
+      <input
+        type="text"
+        name="emri"
+        id="emri"
+        placeholder="Emri"
+        ngModel
+        required
+        pattern="[az-Az]+$"
+      />
+      <input
+        type="text"
+        name="mbiemri"
+        id="mbiemri"
+        placeholder="Mbiemri"
+        ngModel
+        required
+        pattern="[az-Az]+$"
+      />
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Email"
+        required
+        pattern=" [^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+$"
+      />
+      <input
+        type="text"
+        name="ntTel"
+        id="tel"
+        placeholder="Nr. Telefonit"
+        required
+        pattern="/^(0|[1-9]\d*)$/"
+      />
+      <select name="drejtimi" id="drejtimi" ngModel>
+        <option value="Zgjedh Drejtimin">Zgjedh Drejtimin</option>
+        <option value="Matematike">Matematike</option>
+        <option value="Shkenca Kompjuterike">Matematike</option>
+        <option value="Gjeografi">Matematike</option>
+        <option value="Mjeksi">Matematike</option>
+        <option value="Ekonomi">Matematike</option>
+      </select>
+      <select name="rejioni" id="regjioni" ngModel>
+        <option value="Zgjedh Drejtimin">Zgjedh Regjionin</option>
+        <option value="Prishtine">Prishtine</option>
+        <option value="Ferizaj ">Ferizaj</option>
+        <option value="Peje">Peje</option>
+        <option value="Gjakove">Gjakove</option>
+        <option value="Gjilan">Gjilan</option>
+        <option value="Mitrovice">Mitrovice</option>
+        <option value="Prizren">Prizren</option>
+      </select>
+      <input
+        type="radio"
+        name="gjinia"
+        id="mashkull"
+        value="mashkull"
+        ngModel
+      />
+      <label for="mashkull"> Mashkull</label>
+      <input type="radio" name="gjinia" id="femer" value="femer" ngModel />
+      <label for="femer"> Femer</label>
+    </form>
+  </div>
 </section>
