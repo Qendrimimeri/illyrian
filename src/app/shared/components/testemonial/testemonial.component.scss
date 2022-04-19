@@ -1,0 +1,42 @@
+@import "../../../../styles.scss";
+
+section {
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  padding: $padding-sm;
+
+  display: flex;
+  flex-direction: column;
+
+  .header {
+    display: flex;
+    padding: $padding-md;
+    align-items: center;
+
+    img {
+      width: 6rem;
+      height: 6rem;
+      border-radius: $circle;
+    }
+
+    .person-info {
+      padding-left: $padding-md;
+
+      h3 {
+        color: $primary;
+        font-weight: $font-weight-b;
+      }
+
+      p {
+        font-size: $font-rg;
+        color: $color-text;
+      }
+    }
+  }
+  .body {
+    p {
+      font-size: $font-md;
+      color: $color-text;
+    }
+  }
+}

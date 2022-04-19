@@ -1,0 +1,48 @@
+@import '../../../../styles.scss';
+
+section {
+    background-color:$shade-bg-light;
+    padding: $padding-lg;
+}
+
+.drejtimet {
+    @extend %grid-3;
+}
+
+.drejtimi {
+    padding-bottom: 6rem;
+
+    img {
+        @extend %width-height-100;
+        padding: $padding-sm;
+        background-color: $reset-color;
+        box-shadow: $box-shadow;
+        border-radius: $border-radius;
+    }
+
+    p {
+        padding: 1rem .5rem;
+        border-radius: $border-radius;
+        margin-top: 2rem;
+        text-align: center;
+        font-size: $font-md;
+        color: $primary;
+        font-family: $serif-font-headline;
+        font-weight: $font-weight-b;
+        background-color: $reset-color;
+        box-shadow: $box-shadow;
+        letter-spacing: $letter-spacing-sm;
+    }
+}
+
+.center {
+    a   {
+        font-size: $font-rg;
+        font-family: $serif-font-headline;
+        color: $primary;
+        display: flex;
+        justify-content: center;
+        padding: 3rem 0 .5rem 0;
+        text-decoration: underline !important;
+    }
+}

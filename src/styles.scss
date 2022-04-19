@@ -1,1 +1,78 @@
-/* You can add global styles to this file, and also import other style files */
+// All General Styles are declared here.
+@import '/src/assets/sass/variables.scss';
+@import '/src/assets/sass/mixin.scss';
+@import '/src/assets/sass/extend.scss';
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Roboto:wght@300;400;500;600;700;900&display=swap');
+
+// Reset Styles
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    /* font-size: 10px; */
+    font-size: 62.5%;
+  }
+  
+  body {
+    font-family: 'Roboto' sans-serif;
+  }
+  
+
+.center {
+  width: 80%;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+a .regjistrohu {
+  border: 2px solid $secondary;
+  background-color: $secondary;
+  @extend %padding-border-r;
+  font-size: 1.6rem;
+  color: $reset-color;
+  letter-spacing: $letter-spacing-sm;
+}
+
+a .regjistrohu:hover {
+  background-color: transparent;
+  border: 2px solid $reset-color;
+  color: $reset-color;
+  font-size: 1.6rem;
+  letter-spacing: $letter-spacing-sm;
+}
+
+
+.des-header {
+  h2 {
+      color: $primary;
+      font-size: 3.2rem;
+      font-weight: $font-weight-b;
+      font-family: $serif-font-headline;
+      text-align: center;
+      letter-spacing: $letter-spacing-sm;
+  }
+
+  p {
+      color: $color-text;
+      font-size: 1.6rem;
+      text-align: center;
+      padding: 1rem 0;
+      letter-spacing: $letter-spacing-sm;
+
+  }
+}
+
+
+
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';

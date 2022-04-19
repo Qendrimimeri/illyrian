@@ -1,0 +1,35 @@
+@import "../../../../styles.scss";
+
+header {
+  background-color: $secondary;
+  padding: 0.4rem 0;
+}
+
+.center {
+  @extend %flex--jc-sb--ai-c;
+
+  .info {
+    a {
+      color: $reset-color;
+      font-size: $font-md;
+      font-weight: $font-weight-m;
+      margin-right: $font-md;
+      font-family: $sans-serif-font;
+    }
+  }
+}
+
+.social-media {
+  svg {
+    width: 1.6rem;
+    height: 1.6rem;
+    fill: $reset-color;
+  }
+}
+select {
+  background-color: transparent;
+  color: $reset-color;
+  border: none;
+  font-size: $font-md;
+  font-weight: $font-weight-m;
+}

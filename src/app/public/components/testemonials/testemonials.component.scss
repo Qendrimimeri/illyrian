@@ -1,0 +1,9 @@
+@import '../../../../styles.scss';
+
+section{
+    padding: $padding-lg;
+
+    .testimonials {
+        @extend %grid-3;
+    }
+}

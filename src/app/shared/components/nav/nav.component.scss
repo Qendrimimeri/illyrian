@@ -1,0 +1,59 @@
+@import '../../../../styles.scss';
+
+
+nav {
+    width: 100vw;
+    position: absolute;
+    left: 0%;
+    top: 4%;
+    z-index: 6;
+    background-color: rgba(0,0,0,0.6);
+    padding: $padding-sm;
+
+    .center {
+        @extend %flex--jc-sb--ai-c;
+        width: 80%;
+    }
+}
+.logo {
+    p:first-child {
+        color: $secondary;
+        font-size: $font-xl;
+        font-family: $serif-font-headline;
+        letter-spacing: $letter-spacing-md;
+        font-weight: $font-weight-b;
+    }
+    p:last-child {
+        color: $reset-color;
+        font-size: $font-md;
+        letter-spacing: $letter-spacing-md;
+        font-family: $sans-serif-font;
+    }
+}
+menu {
+    flex-basis: 75%;
+    @extend %flex--jc-sb--ai-c;
+}
+.menu {
+    border: none;
+    background-color: transparent;
+    font-size: $font-lg;
+    color: $reset-color;
+    font-family: $sans-serif-font;
+    letter-spacing: $letter-spacing-md;
+    font-weight: $font-weight-m;
+    cursor: pointer;
+    
+    &:hover {
+        color: $secondary;
+    }
+}
+.kyqu {
+    border: 2px solid $reset-color;
+    @extend %padding-border-r;
+
+    &:hover {
+        color: $secondary;
+        border: 2px solid $secondary;
+    }
+}
