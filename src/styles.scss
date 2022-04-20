@@ -33,7 +33,7 @@ a {
   text-decoration: none !important;
 }
 
-a .regjistrohu, .mobile-regjistrohu {
+a .regjistrohu, .mobile-regjistrohu, .regjistrohu {
   border: 2px solid $secondary;
   background-color: $secondary;
   @extend %padding-border-r;
@@ -42,7 +42,7 @@ a .regjistrohu, .mobile-regjistrohu {
   letter-spacing: $letter-spacing-sm;
 }
 
-a .regjistrohu:hover {
+a .regjistrohu:hover , .regjistrohu:hover{
   background-color: transparent;
   border: 2px solid $reset-color;
   color: $reset-color;

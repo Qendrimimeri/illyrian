@@ -1,71 +1,61 @@
 <section>
   <div class="center">
-    <form
-      #regjisterForm="ngForm"
-      (ngSubmit)="regjisterUser(regjisterForm.value)"
-    >
-      <input
-        type="text"
-        name="emri"
-        id="emri"
-        placeholder="Emri"
-        ngModel
-        required
-        pattern="[az-Az]+$"
-      />
-      <input
-        type="text"
-        name="mbiemri"
-        id="mbiemri"
-        placeholder="Mbiemri"
-        ngModel
-        required
-        pattern="[az-Az]+$"
-      />
-      <input
-        type="email"
-        name="email"
-        id="email"
-        placeholder="Email"
-        required
-        pattern=" [^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+$"
-      />
-      <input
-        type="text"
-        name="ntTel"
-        id="tel"
-        placeholder="Nr. Telefonit"
-        required
-        pattern="/^(0|[1-9]\d*)$/"
-      />
-      <select name="drejtimi" id="drejtimi" ngModel>
-        <option value="Zgjedh Drejtimin">Zgjedh Drejtimin</option>
-        <option value="Matematike">Matematike</option>
-        <option value="Shkenca Kompjuterike">Matematike</option>
-        <option value="Gjeografi">Matematike</option>
-        <option value="Mjeksi">Matematike</option>
-        <option value="Ekonomi">Matematike</option>
-      </select>
-      <select name="rejioni" id="regjioni" ngModel>
-        <option value="Zgjedh Drejtimin">Zgjedh Regjionin</option>
-        <option value="Prishtine">Prishtine</option>
-        <option value="Ferizaj ">Ferizaj</option>
-        <option value="Peje">Peje</option>
-        <option value="Gjakove">Gjakove</option>
-        <option value="Gjilan">Gjilan</option>
-        <option value="Mitrovice">Mitrovice</option>
-        <option value="Prizren">Prizren</option>
-      </select>
-      <input
-        type="radio"
-        name="gjinia"
-        id="mashkull"
-        value="mashkull"
-        ngModel
-      />
-      <label for="mashkull"> Mashkull</label>
-      <input type="radio" name="gjinia" id="femer" value="femer" ngModel />
-      <label for="femer"> Femer</label>
-    </form>
+    <div class="helping-info">
+      <h2>Mire Se Erdhet</h2>
+      <p>Nese deshorioni te Kyqeni</p>
+      <button class="regjistrohu"> Kyqu</button>
+    </div>
+    <div class="cover">
+      <h3>Regjistrohu</h3>
+      <form #regjisterForm="ngForm" (ngSubmit)="regjisterUser(regjisterForm.value)">
+        <label for="emri">Emri</label>
+        <input type="text" name="emri" id="emri" placeholder="Emri" ngModel required pattern="[az-Az]+$"
+          #emri="ngModel" />
+        <span class="email" *ngIf="emri.invalid && emri.touched">
+          Emri nuk esht shenuar si duhet</span>
+        <label for="mbiemri">Mbiemri</label>
+        <input type="text" name="mbiemri" id="mbiemri" placeholder="Mbiemri" ngModel required pattern="[az-Az]+$"
+          #mbiemri="ngModel" />
+        <span class="email" *ngIf="mbiemri.invalid && mbiemri.touched">
+          mbiemri nuk esht shenuar si duhet</span>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Email" required
+          pattern=" [^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+$" ngModel #email="ngModel" />
+        <span class="email" *ngIf="email.invalid && email.touched">
+          Emaili nuk esht shenuar si duhet</span>
+        <label for="nrTel">Nr. Telefonit</label>
+        <input type="text" name="ntTel" id="tel" placeholder="Nr. Telefonit" required ngModel pattern="^[0-9]{1,9}$"
+          #nrTel="ngModel" />
+        <span class="email" *ngIf="nrTel.invalid && nrTel.touched">
+          Nr. Telefonit nuk esht shenuar si duhet</span>
+        <select name="drejtimi" id="drejtimi" ngModel >
+          <option value="Matematike">Matematike</option>
+          <option value="Shkenca Kompjuterike">Mjeksi</option>
+          <option value="Gjeografi">Shkenca Kompjuterike</option>
+          <option value="Mjeksi">Gjeografi</option>
+          <option value="Ekonomi">Fizik</option>
+        </select>
+        <select name="rejioni" id="regjioni" ngModel>
+          <option value="Prishtine">Prishtine</option>
+          <option value="Ferizaj ">Ferizaj</option>
+          <option value="Peje">Peje</option>
+          <option value="Gjakove">Gjakove</option>
+          <option value="Gjilan">Gjilan</option>
+          <option value="Mitrovice">Mitrovice</option>
+          <option value="Prizren">Prizren</option>
+        </select>
+        <div class="gjinia">
+          <div>
+          <input type="radio" name="gjinia" id="mashkull" value="mashkull" ngModel />
+          <label for="mashkull"> Mashkull</label>
+          </div>
+          <div>
+          <input type="radio" name="gjinia" id="femer" value="femer" ngModel />
+          <label for="femer"> Femer</label>
+          </div>
+        </div>
+          <button [disabled]="regjisterForm.invalid"> Regjistrohu</button>
+      </form>
+    </div>
   </div>
 </section>

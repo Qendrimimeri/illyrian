@@ -1,6 +1,10 @@
+<router-outlet></router-outlet>
 <section>
   <div class="center">
+    <div class="cover">
     <form #loginForm="ngForm" (ngSubmit)="loginUser(loginForm.value)">
+      <h3>Kyqu</h3>
+      <label for="email">Email</label>
       <input
         type="email"
         name="email"
@@ -13,17 +17,26 @@
       />
       <br />
       <span class="email" *ngIf="name.invalid && name.touched">
-        Email Addressa nuk esht valide</span
+        Email Addressa nuk esht shenuar si duhet</span
       >
+      <label for="password">FjalKalimi</label>
       <input
         type="password"
         name="password"
         id="password"
         placeholder="Shenoni FjalKalimin"
-        ng
         ngModel
+        #pass="ngModel"
       />
-      <button [disabled]="loginForm.invalid">Dergo</button>
+      <span class="email" *ngIf="pass.invalid && pass.touched">
+        Fjalkalimi esht obligativ</span>
+      <button [disabled]="loginForm.invalid">Kyqu</button>
     </form>
+    </div>
+    <div class="helping-info">
+      <h2>Mire Se Erdhet</h2>
+      <p>Nuk jeni te regjistruar</p>
+      <button class="regjistrohu"> Regjistrohu</button>
+    </div>
   </div>
 </section>
