@@ -1,4 +1,12 @@
-@import "../../../../styles.scss";
+@import "../../../../../styles.scss";
+
+@media (max-width: 980px) {
+
+  .helping-info {
+    display: none !important;
+  }
+
+}
 
 section {
   width: 100%;
@@ -42,6 +50,7 @@ section {
           font-size: $font-rg;
           margin: 1rem 0;
         }
+
         input {
           background-color: transparent;
           border-radius: $border-radius;
@@ -105,27 +114,12 @@ section {
         font-size: 5.2rem;
         padding-bottom: 4rem;
       }
+
       p {
         font-size: $font-xl;
         color: $reset-color;
         font-weight: $font-weight-m;
       }
     }
-  }
-}
-
-
-@media (max-width: 980px) {
-
-  .helping-info{
-      display: none !important;
-  }
-
-}
-
-@media (max-width: 400px) {
-  input {
-    width: 26rem;
-    height: 2rem;
   }
 }

@@ -3,7 +3,7 @@
     <div class="helping-info">
       <h2>Mire Se Erdhet</h2>
       <p>Nese deshorioni te Kyqeni</p>
-      <button class="regjistrohu"> Kyqu</button>
+      <a routerLink="/login"><button class="regjistrohu"> Kyqu</button></a>
     </div>
     <div class="cover">
       <h3>Regjistrohu</h3>
@@ -28,15 +28,18 @@
           #nrTel="ngModel" />
         <span class="email" *ngIf="nrTel.invalid && nrTel.touched">
           Nr. Telefonit nuk esht shenuar si duhet</span>
-        <select name="drejtimi" id="drejtimi" ngModel >
+        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+          <option selected>Zgjedh Drejtimin</option>
           <option value="Matematike">Matematike</option>
           <option value="Shkenca Kompjuterike">Mjeksi</option>
           <option value="Gjeografi">Shkenca Kompjuterike</option>
           <option value="Mjeksi">Gjeografi</option>
-          <option value="Ekonomi">Fizik</option>
+          <option value="Ekonomi">Matematike</option>
         </select>
-        <select name="rejioni" id="regjioni" ngModel>
-          <option value="Prishtine">Prishtine</option>
+
+        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+          <option selected>Zgjedh Regjionin</option>
+          <option value="Prishtine" ngModel>Prishtine</option>
           <option value="Ferizaj ">Ferizaj</option>
           <option value="Peje">Peje</option>
           <option value="Gjakove">Gjakove</option>
@@ -46,15 +49,15 @@
         </select>
         <div class="gjinia">
           <div>
-          <input type="radio" name="gjinia" id="mashkull" value="mashkull" ngModel />
-          <label for="mashkull"> Mashkull</label>
+            <input type="radio" name="gjinia" id="mashkull" value="mashkull" ngModel />
+            <label for="mashkull"> Mashkull</label>
           </div>
           <div>
-          <input type="radio" name="gjinia" id="femer" value="femer" ngModel />
-          <label for="femer"> Femer</label>
+            <input type="radio" name="gjinia" id="femer" value="femer" ngModel />
+            <label for="femer"> Femer</label>
           </div>
         </div>
-          <button [disabled]="regjisterForm.invalid"> Regjistrohu</button>
+        <button [disabled]="regjisterForm.invalid"> Regjistrohu</button>
       </form>
     </div>
   </div>

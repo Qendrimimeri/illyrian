@@ -3,16 +3,20 @@ import { CommonModule } from '@angular/common';
 
 import { PrivateRoutingModule } from './private-routing.module';
 import { PrivateComponent } from './private.component';
-import { SharedModule } from '../shared/shared.module';
+import { PublicModule } from '../public/public.module';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
     PrivateComponent,
+    DashboardComponent,
+    SidebarComponent,
   ],
   imports: [
     CommonModule,
     PrivateRoutingModule,
-    SharedModule,
+    PublicModule
   ],
   exports: [
     PrivateComponent,
