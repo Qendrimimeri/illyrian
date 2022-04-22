@@ -7,28 +7,18 @@
     </div>
     <div class="cover">
       <h3>Regjistrohu</h3>
-      <form #regjisterForm="ngForm" (ngSubmit)="regjisterUser(regjisterForm.value)">
+      <form [formGroup]="signUpForm" (ngSubmit)="signUp()">
         <label for="emri">Emri</label>
-        <input type="text" name="emri" id="emri" placeholder="Emri" ngModel required pattern="[az-Az]+$"
-          #emri="ngModel" />
-        <span class="email" *ngIf="emri.invalid && emri.touched">
-          Emri nuk esht shenuar si duhet</span>
+        <input type="text" name="emri" id="emri" placeholder="Emri" required formControlName="emri"/>
         <label for="mbiemri">Mbiemri</label>
-        <input type="text" name="mbiemri" id="mbiemri" placeholder="Mbiemri" ngModel required pattern="[az-Az]+$"
-          #mbiemri="ngModel" />
-        <span class="email" *ngIf="mbiemri.invalid && mbiemri.touched">
-          mbiemri nuk esht shenuar si duhet</span>
+        <input type="text" name="mbiemri" id="mbiemri" placeholder="Mbiemri" required formControlName="mbiemri"/>
         <label for="email">Email</label>
-        <input type="email" name="email" id="email" placeholder="Email" required
-          pattern=" [^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+$" ngModel #email="ngModel" />
-        <span class="email" *ngIf="email.invalid && email.touched">
-          Emaili nuk esht shenuar si duhet</span>
+        <input type="email" name="email" id="email" placeholder="Email" required formControlName="email"/>
+        <label for="password">Fjalkalimi</label>
+        <input type="password" name="password"  placeholder="FjalKalimi" required formControlName="password"/>
         <label for="nrTel">Nr. Telefonit</label>
-        <input type="text" name="ntTel" id="tel" placeholder="Nr. Telefonit" required ngModel pattern="^[0-9]{1,9}$"
-          #nrTel="ngModel" />
-        <span class="email" *ngIf="nrTel.invalid && nrTel.touched">
-          Nr. Telefonit nuk esht shenuar si duhet</span>
-        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+        <input type="text" name="ntTel" id="tel" placeholder="Nr. Telefonit" required formControlName="nrTel"/>
+        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" formControlName="drejtimi">
           <option selected>Zgjedh Drejtimin</option>
           <option value="Matematike">Matematike</option>
           <option value="Shkenca Kompjuterike">Mjeksi</option>
@@ -37,9 +27,9 @@
           <option value="Ekonomi">Matematike</option>
         </select>
 
-        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" formControlName="regjioni">
           <option selected>Zgjedh Regjionin</option>
-          <option value="Prishtine" ngModel>Prishtine</option>
+          <option value="Prishtine">Prishtine</option>
           <option value="Ferizaj ">Ferizaj</option>
           <option value="Peje">Peje</option>
           <option value="Gjakove">Gjakove</option>
@@ -49,15 +39,15 @@
         </select>
         <div class="gjinia">
           <div>
-            <input type="radio" name="gjinia" id="mashkull" value="mashkull" ngModel />
+            <input type="radio" name="gjinia" id="mashkull" value="mashkull" formControlName="gjinia"/>
             <label for="mashkull"> Mashkull</label>
           </div>
           <div>
-            <input type="radio" name="gjinia" id="femer" value="femer" ngModel />
+            <input type="radio" name="gjinia" id="femer" value="femer" formControlName="gjinia" />
             <label for="femer"> Femer</label>
           </div>
         </div>
-        <button [disabled]="regjisterForm.invalid"> Regjistrohu</button>
+        <button > Regjistrohu</button>
       </form>
     </div>
   </div>

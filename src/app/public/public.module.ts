@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PublicRoutingModule } from './public-routing.module';
 import { PublicComponent } from './public.component';
 import { HeroSectionComponent } from './components/hero-section/hero-section.component';
@@ -15,6 +15,7 @@ import { Error404Component } from './components/error404/error404.component';
 import { TestemonialComponent } from './components/testemonial/testemonial.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { KursetComponent } from './components/kurset/kurset.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { KursetComponent } from './components/kurset/kurset.component';
     CommonModule,
     PublicRoutingModule,
     FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     PublicComponent,

@@ -10,8 +10,9 @@ section {
   align-items: center;
 
   .center {
+    padding: $padding-md;
     width: 85%;
-    height: 90%;
+    height: 100%;
     display: flex;
 
     .cover {

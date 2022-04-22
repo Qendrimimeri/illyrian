@@ -2,17 +2,13 @@
 <section>
   <div class="center">
     <div class="cover">
-      <form #loginForm="ngForm" (ngSubmit)="loginUser(loginForm.value)">
+      <form [formGroup]="logInForm" (ngSubmit)="logIn()">
         <h3>Kyqu</h3>
         <label for="email">Email</label>
-        <input type="email" name="email" id="email" placeholder="Shkruani Email Addressen" ngModel #name="ngModel"
-          required/>
+        <input type="email" name="email" id="email" placeholder="Shkruani Email Addressen" required formControlName="email"/>
         <br />
-        <span class="email" *ngIf="name.invalid && name.touched">
-          Email Addressa nuk esht shenuar si duhet</span>
         <label for="password">FjalKalimi</label>
-        <input type="password" name="password" id="password" placeholder="Shenoni FjalKalimin" ngModel
-          #pass="ngModel" />
+        <input type="password" name="password" id="password" placeholder="Shenoni FjalKalimin" required formControlName="password"/>
         <button >Kyqu</button>
       </form>
     </div>

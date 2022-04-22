@@ -7,6 +7,7 @@ import { PrivateModule } from './private/private.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Routes } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     PrivateModule,
     NgbModule,
     ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

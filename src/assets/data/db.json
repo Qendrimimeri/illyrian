@@ -9,40 +9,39 @@
       "id": 2,
       "title": "Shkenca Kompjuterike",
       "img": "../../../../"
-    },    {
+    },
+    {
       "id": 3,
       "title": "Gjeografi",
       "img": "../../../../"
-    },    {
+    },
+    {
       "id": 4,
       "title": "Histori",
       "img": "../../../../"
-    },    {
+    },
+    {
       "id": 5,
       "title": "Fizik",
       "img": "../../../../"
-    },    {
+    },
+    {
       "id": 6,
       "title": "Mjeksi",
       "img": "../../../../"
     }
   ],
-
-
-
-
   "kurset": [
     {
       "id": 1,
       "img": "../../../",
       "lable": "FIGMA",
       "title": "Dizajn Grafik: Zhvillimi i dizajev grafike permes vektorve"
-
     }
   ],
   "news": [
     {
-    "name": "typicode"
+      "name": "typicode"
     }
   ],
   "testimonials": [
@@ -52,11 +51,29 @@
       "postId": 1
     }
   ],
-  "studentat": [
+  "studentat": [],
+  "SingUpUsers": [
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "emri": "qendrim",
+      "mbiemri": "imeri",
+      "email": "admin@gmail.com",
+      "password": "admin",
+      "nrTel": "123123123",
+      "drejtimi": "Gjeografi",
+      "regjioni": "Prishtine",
+      "gjinia": "mashkull",
+      "id": 1
+    },
+    {
+      "emri": "altin ",
+      "mbiemri": "imeri",
+      "email": "tini@imeri.com",
+      "password": "tini1123",
+      "nrTel": "1234",
+      "drejtimi": "Shkenca Kompjuterike",
+      "regjioni": "Ferizaj ",
+      "gjinia": "mashkull",
+      "id": 2
     }
   ]
 }

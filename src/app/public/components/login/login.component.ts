@@ -1,35 +1,40 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup ,FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthService } from 'src/app/core/auth/auth.service';
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit {
-  data: any;
+export class LoginComponent implements OnInit 
+{
+  public logInForm !: FormGroup;
 
-  constructor(private auth : AuthService, private router : Router) {
-
-   }
+  constructor(private formBuilder : FormBuilder, private http : HttpClient, private router : Router) { }
 
   ngOnInit(): void {
+    this.logInForm = this.formBuilder.group({
+      email: [''],
+      password : ['']
+    })
   }
-
-  loginUser(item:any) {
-    this.data = item;
-    if (this.data.valid) {
-      this.auth.login(this.data).subscribe(
-        (result) => {
-          this.router.navigate(['admin/sidebar'])
-        },
-        (err: Error) => {
-          alert(err.message)
-        }
-      );
-    }
-    console.warn(this.data)
+  logIn (){
+    this.http.get<any>('http://localhost:3000/SingUpUsers')
+    .subscribe(res => {
+      const user = res.find((a:any) => {
+        return a.email === this.logInForm.value.email && a.password === this.logInForm.value.password
+      });
+      if (user) {
+        alert('Jeni Kyqur me sukses');
+        this.logInForm.reset();
+        this.router.navigate(['admin']);
+      }
+      else{
+        alert('Perdorusi nuk egziston');
+      }
+    }, err => {
+      alert('diqka ka shku keq i nderun');
+    })
   }
 }
