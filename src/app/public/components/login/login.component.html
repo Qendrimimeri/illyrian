@@ -6,16 +6,14 @@
         <h3>Kyqu</h3>
         <label for="email">Email</label>
         <input type="email" name="email" id="email" placeholder="Shkruani Email Addressen" ngModel #name="ngModel"
-          required pattern=" [^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+$" />
+          required/>
         <br />
         <span class="email" *ngIf="name.invalid && name.touched">
           Email Addressa nuk esht shenuar si duhet</span>
         <label for="password">FjalKalimi</label>
         <input type="password" name="password" id="password" placeholder="Shenoni FjalKalimin" ngModel
           #pass="ngModel" />
-        <span class="email" *ngIf="pass.touched">
-          Fjalkalimi esht obligativ</span>
-        <button [disabled]="loginForm.invalid">Kyqu</button>
+        <button >Kyqu</button>
       </form>
     </div>
     <div class="helping-info">
