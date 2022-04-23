@@ -1,0 +1,35 @@
+<ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Hi there!</h4>
+      <button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+      <form [formGroup]="kursForm" (ngSubmit)="shto()">
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Label</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Shembull: Python">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Titulli</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Titulli">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Modulet</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Modulet">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Kohe Zgjatja</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Kohe Zgjatja">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Qmimi</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Qmimi">
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Save</button>
+    </div>
+  </ng-template>
+  
+  <button class="btn btn-lg text-white" style="font-size: 16px;" (click)="open(content)">Shto nje Kurs</button>

@@ -27,7 +27,7 @@ export class RegjisterComponent implements OnInit {
     })
   }
   signUp (){
-    this.http.post<any>('http://localhost:3000/SingUpUsers', this.signUpForm.value)
+    this.http.post<any>('http://localhost:3000/Studentat', this.signUpForm.value)
     .subscribe(res => {
       alert('U Regjistruat me Sukses');
       this.signUpForm.reset();

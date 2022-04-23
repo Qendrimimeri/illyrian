@@ -34,9 +34,39 @@
   "kurset": [
     {
       "id": 1,
-      "img": "../../../",
+      "img": "../../../../assets/img/kurset/figma.webp",
       "lable": "FIGMA",
-      "title": "Dizajn Grafik: Zhvillimi i dizajev grafike permes vektorve"
+      "title": "Dizajn Grafik: Zhvillimi i dizajev grafike permes vektorve",
+      "module": "12 module",
+      "duration": "10h",
+      "price": "200"
+    },
+    {
+      "id": 1,
+      "img": "../../../../assets/img/kurset/figma.webp",
+      "lable": "FIGMA",
+      "title": "Dizajn Grafik: Zhvillimi i dizajev grafike permes vektorve",
+      "module": "12 module",
+      "duration": "10h",
+      "price": "200"
+    },
+    {
+      "id": 1,
+      "img": "../../../../assets/img/kurset/figma.webp",
+      "lable": "FIGMA",
+      "title": "Dizajn Grafik: Zhvillimi i dizajev grafike permes vektorve",
+      "module": "12 module",
+      "duration": "10h",
+      "price": "200"
+    },
+    {
+      "id": 1,
+      "img": "../../../../assets/img/kurset/figma.webp",
+      "lable": "FIGMA",
+      "title": "Dizajn Grafik: Zhvillimi i dizajev grafike permes vektorve",
+      "module": "12 module",
+      "duration": "10h",
+      "price": "200"
     }
   ],
   "news": [
@@ -51,28 +81,27 @@
       "postId": 1
     }
   ],
-  "studentat": [],
-  "SingUpUsers": [
+  "studentat": [
     {
       "emri": "qendrim",
       "mbiemri": "imeri",
-      "email": "admin@gmail.com",
+      "email": "qendrim@imeri.com",
       "password": "admin",
       "nrTel": "123123123",
-      "drejtimi": "Gjeografi",
-      "regjioni": "Prishtine",
+      "drejtimi": "Shkenca Kompjuterike",
+      "regjioni": "Gjakove",
       "gjinia": "mashkull",
       "id": 1
     },
     {
-      "emri": "altin ",
-      "mbiemri": "imeri",
-      "email": "tini@imeri.com",
-      "password": "tini1123",
-      "nrTel": "1234",
-      "drejtimi": "Shkenca Kompjuterike",
-      "regjioni": "Ferizaj ",
-      "gjinia": "mashkull",
+      "emri": "",
+      "mbiemri": "",
+      "email": "admin@gmail.com",
+      "password": "admin",
+      "nrTel": "",
+      "drejtimi": "",
+      "regjioni": "",
+      "gjinia": "",
       "id": 2
     }
   ]

@@ -8,6 +8,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Routes } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { KursetService } from './private/modules/kurset/services/kurset.service'
 
 
 @NgModule({
@@ -23,7 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [KursetService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

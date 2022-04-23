@@ -5,8 +5,8 @@ import { PrivateComponent } from './private.component';
 const routes: Routes = [
   { path : '', component : PrivateComponent, 
   children : [
-    { path: '', redirectTo : '/admin/kurset', pathMatch: 'full'},
-    { path: 'admin/kurset', loadChildren: () => import('./modules/kurset/kurset.module').then(m => m.KursetModule) },
+    { path: '', redirectTo : 'kurset', pathMatch: 'full'},
+    { path: 'kurset', loadChildren: () => import('./modules/kurset/kurset.module').then(m => m.KursetModule) },
   ] 
 }
 ];

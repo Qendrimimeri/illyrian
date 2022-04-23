@@ -6,16 +6,18 @@ import { PrivateComponent } from './private.component';
 import { PublicModule } from '../public/public.module';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { HttpClientModule } from '@angular/common/http';
-import { CreateKursComponent } from './modules/kurset/components/kursi/create-kurs/create-kurs.component';
-import { UpdateKursComponent } from './modules/kurset/components/kursi/update-kurs/update-kurs.component';
-import { ViewKursComponent } from './modules/kurset/components/kursi/view-kurs/view-kurs.component';
-import { DeleteKursComponent } from './modules/kurset/components/kursi/delete-kurs/delete-kurs.component'
+import { UpdateKursComponent } from './modules/kurset/components/update-kurs/update-kurs.component';
+import { ViewKursComponent } from './modules/kurset/components/view-kurs/view-kurs.component';
+import { DeleteKursComponent } from './modules/kurset/components/delete-kurs/delete-kurs.component'
 import { NavComponent } from './components/nav/nav.component';
+import { KursetService } from './modules/kurset/services/kurset.service';
+import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CreateKursComponent } from './modules/kurset/components/create-kurs/create-kurs.component';
+
 @NgModule({
   declarations: [
     PrivateComponent,
     SidebarComponent,
-    CreateKursComponent,
     UpdateKursComponent,
     ViewKursComponent,
     DeleteKursComponent,
@@ -26,9 +28,13 @@ import { NavComponent } from './components/nav/nav.component';
     PrivateRoutingModule,
     PublicModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     PrivateComponent,
-  ]
+  ],
+  providers: [KursetService],
+
 })
 export class PrivateModule { }
